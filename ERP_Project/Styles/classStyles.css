@@ -1,0 +1,29 @@
+//Global Rules 
+body {
+    text-align: center;
+}
+
+//Class Rules
+
+.sideNote {
+    color: #999999;
+}
+
+.twoColumns {
+    width: 50%;
+}
+
+.threeColumns {
+    width: 33.33%
+}
+
+//Class rules overrides
+@media screen and (max-width: 600px){
+    .twoColumns {
+        width: 100%;
+    }
+    
+    .threeColumns {
+        width: 100%;
+    }
+}
