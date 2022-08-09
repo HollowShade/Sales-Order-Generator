@@ -331,6 +331,36 @@
                             $cost = $salesReference[searchArray($salesReference, $identity)][12];
                         }
                         
+                        //If company name, product name, and customer area are still null, use these loops to give them a value, starting with company name
+                        if ($companyName == null){
+                            foreach($companyReference as $company){
+                                if ($companyID == $company[0]){
+                                    $companyName = $company[1];
+                                    break;
+                                }
+                            }
+                        }
+
+                        //Now collect the customer area from the customer reference
+                        if ($customerArea == null){
+                            foreach($customerReference as $customer){
+                                if ($customerID == $customer[0]){
+                                    $customerArea = $customer[3];
+                                    break;
+                                }
+                            }
+                        }
+
+                        //Now collect the product name from the product reference
+                        if ($productName == null){
+                            foreach($productReference as $product){
+                                if ($productID == $product[0]){
+                                    $productName = $product[1];
+                                    break;
+                                }
+                            }
+                        }
+                        
                         //Some parts of data creation/modification require the page to truely save data
                         if ($save == "true"){
                             //Reset $endMessage so we don't get a create or load message

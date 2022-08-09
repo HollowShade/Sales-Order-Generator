@@ -195,7 +195,7 @@
                                                         $check[9] = 0.00;
                                                     }
                                                     else{
-                                                        $check[9] = floatval($check[8]);
+                                                        $check[9] = floatval($check[9]);
                                                     }
 
                                                     //Now check products sold to make sure it's not empty or less than 0
@@ -226,7 +226,7 @@
                                                     }
 
                                                     //Add check to the current transit entry
-                                                    $transit[$legalEntries] = check;
+                                                    $transit[$legalEntries] = $check;
                                                 }
                                             }
                                             elseif (count($check) == 9 || count($check) == 10){
